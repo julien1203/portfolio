@@ -1145,210 +1145,126 @@ table, caption, th, td {
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   transition: transform 0.25s, box-shadow 0.25s;
 }
-
-.bts-block:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.11);
-}
-
-.bts-block h4 {
-  font-size: 15px;
-  font-weight: 700;
-  color: #173b6c;
-  margin-bottom: 10px;
-}
-
-.bts-block h4 i {
-  color: #149ddd;
-  margin-right: 8px;
-  font-size: 16px;
-}
-
-.bts-block p {
-  font-size: 14px;
-  color: #555;
-  margin: 0;
-  line-height: 1.65;
-}
+.bts-block:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.11); }
+.bts-block h4 { font-size: 15px; font-weight: 700; color: #173b6c; margin-bottom: 10px; }
+.bts-block h4 i { color: #149ddd; margin-right: 8px; font-size: 16px; }
+.bts-block p { font-size: 14px; color: #555; margin: 0; line-height: 1.65; }
 
 /*--------------------------------------------------------------
 # E5 Document List
 --------------------------------------------------------------*/
-.doc-list {
-  list-style: none;
-  padding: 0;
-}
-
-.doc-list li {
-  margin-bottom: 10px;
-}
-
+.doc-list { list-style: none; padding: 0; }
+.doc-list li { margin-bottom: 10px; }
 .doc-list li a {
-  display: flex;
-  align-items: flex-start;
-  gap: 9px;
-  padding: 10px 14px;
-  background: #fff;
+  display: flex; align-items: flex-start; gap: 9px;
+  padding: 10px 14px; background: #fff;
+  border: 1px solid #e4edf5; border-radius: 5px;
+  font-size: 14px; color: #444; transition: all 0.25s; line-height: 1.45;
+}
+.doc-list li a i { color: #e74c3c; font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.doc-list li a:hover { background: #f0f8ff; border-color: #149ddd; color: #149ddd; transform: translateX(4px); }
+
+/*--------------------------------------------------------------
+# Projets Majeurs
+--------------------------------------------------------------*/
+.projets { background: #fff; }
+
+.projet-card {
+  background: #f9fbfd;
   border: 1px solid #e4edf5;
-  border-radius: 5px;
-  font-size: 14px;
-  color: #444;
-  transition: all 0.25s;
-  line-height: 1.45;
+  border-radius: 6px;
+  padding: 22px 24px;
+  height: 100%;
+  transition: box-shadow 0.25s, transform 0.25s;
 }
+.projet-card:hover { box-shadow: 0 6px 20px rgba(20,157,221,0.13); transform: translateY(-3px); }
 
-.doc-list li a i {
-  color: #e74c3c;
-  font-size: 16px;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.doc-list li a:hover {
-  background: #f0f8ff;
+.projet-card--featured {
   border-color: #149ddd;
-  color: #149ddd;
-  transform: translateX(4px);
+  border-left: 4px solid #149ddd;
+  background: #f0f8ff;
 }
+
+.projet-header { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+
+.projet-badge {
+  display: inline-block;
+  font-size: 11px; font-weight: 700; font-family: "Poppins", sans-serif;
+  background: #e8f4fd; color: #0e76a8;
+  padding: 3px 10px; border-radius: 3px;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.projet-badge--highlight { background: #149ddd; color: #fff; }
+
+.projet-card h4 {
+  font-size: 16px; font-weight: 700; color: #173b6c; margin-bottom: 4px;
+}
+.projet-context { font-size: 12px; color: #888; margin-bottom: 10px; }
+
+.projet-card p:not(.projet-context) { font-size: 13.5px; color: #555; line-height: 1.65; margin-bottom: 12px; }
+
+.projet-tech {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;
+}
+.projet-tech span {
+  font-size: 11px; background: #e8f4fd; color: #0e76a8;
+  padding: 2px 8px; border-radius: 3px; font-family: "Poppins", sans-serif;
+  border: 1px solid rgba(14,118,168,0.2);
+}
+
+.projet-skills {
+  font-size: 12px; color: #149ddd; margin-bottom: 14px;
+}
+.projet-skills i { margin-right: 3px; }
+
+.projet-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; color: #149ddd;
+  border: 1px solid #149ddd; border-radius: 4px;
+  padding: 6px 14px; transition: all 0.2s;
+}
+.projet-link:hover { background: #149ddd; color: #fff; text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Veille Technologique
 --------------------------------------------------------------*/
-.veille {
-  background: #fff;
-}
-
+.veille { }
 .btn-veille {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 14px;
-  padding: 9px 20px;
-  background: #149ddd;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 600;
-  transition: background 0.25s;
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: 14px; padding: 9px 20px; background: #149ddd;
+  color: #fff; border-radius: 4px; font-size: 13px; font-weight: 600; transition: background 0.25s;
 }
-
-.btn-veille:hover {
-  background: #0d7ab5;
-  color: #fff;
-}
-
+.btn-veille:hover { background: #0d7ab5; color: #fff; }
 .veille-subtitle {
-  font-size: 16px;
-  font-weight: 700;
-  color: #173b6c;
-  margin-bottom: 18px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #e4edf5;
+  font-size: 16px; font-weight: 700; color: #173b6c;
+  margin-bottom: 18px; padding-bottom: 8px; border-bottom: 2px solid #e4edf5;
 }
-
-/* Trend cards */
 .veille-trend {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  background: #f5f8fd;
-  border: 1px solid #e4edf5;
-  border-radius: 6px;
-  padding: 16px 18px;
-  height: 100%;
-  transition: border-color 0.25s, box-shadow 0.25s;
+  display: flex; align-items: flex-start; gap: 16px;
+  background: #f5f8fd; border: 1px solid #e4edf5; border-radius: 6px;
+  padding: 16px 18px; height: 100%; transition: border-color 0.25s, box-shadow 0.25s;
 }
-
-.veille-trend:hover {
-  border-color: #149ddd;
-  box-shadow: 0 4px 14px rgba(20,157,221,0.1);
-}
-
-.trend-num {
-  font-family: "Poppins", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #149ddd;
-  line-height: 1;
-  flex-shrink: 0;
-  min-width: 32px;
-}
-
-.veille-trend h5 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #173b6c;
-  margin-bottom: 6px;
-}
-
-.veille-trend p {
-  font-size: 13px;
-  color: #666;
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* Log entries */
-.veille-log {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-
+.veille-trend:hover { border-color: #149ddd; box-shadow: 0 4px 14px rgba(20,157,221,0.1); }
+.trend-num { font-family: "Poppins", sans-serif; font-size: 22px; font-weight: 700; color: #149ddd; line-height: 1; flex-shrink: 0; min-width: 32px; }
+.veille-trend h5 { font-size: 14px; font-weight: 700; color: #173b6c; margin-bottom: 6px; }
+.veille-trend p { font-size: 13px; color: #666; margin: 0; line-height: 1.6; }
+.veille-log { display: flex; flex-direction: column; gap: 1px; }
 .vlog-item {
-  background: #f9fbfd;
-  border: 1px solid #e4edf5;
-  border-left: 3px solid #149ddd;
-  padding: 14px 16px;
-  transition: background 0.2s;
+  background: #f9fbfd; border: 1px solid #e4edf5; border-left: 3px solid #149ddd;
+  padding: 14px 16px; transition: background 0.2s;
 }
-
-.vlog-item:hover {
-  background: #eef6fc;
-}
-
-.vlog-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 5px;
-}
-
-.vlog-date {
-  font-size: 11px;
-  font-family: "Poppins", sans-serif;
-  color: #888;
-}
-
-.vlog-tag {
-  font-size: 10px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
+.vlog-item:hover { background: #eef6fc; }
+.vlog-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.vlog-date { font-size: 11px; font-family: "Poppins", sans-serif; color: #888; }
+.vlog-tag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.06em; }
 .tag-pfsense { background: #e8f4fd; color: #0e76a8; }
 .tag-storm   { background: #fff3e0; color: #e65100; }
 .tag-forti   { background: #fce4ec; color: #c62828; }
 .tag-global  { background: #e8f5e9; color: #2e7d32; }
-
-.vlog-item h5 {
-  font-size: 13px;
-  font-weight: 700;
-  color: #173b6c;
-  margin-bottom: 4px;
-}
-
-.vlog-item p {
-  font-size: 13px;
-  color: #666;
-  margin: 0;
-  line-height: 1.55;
-}
+.vlog-item h5 { font-size: 13px; font-weight: 700; color: #173b6c; margin-bottom: 4px; }
+.vlog-item p  { font-size: 13px; color: #666; margin: 0; line-height: 1.55; }
 
 @media (max-width: 768px) {
   .veille-trend { flex-direction: row; }
-  .vlog-item { padding: 12px; }
+  .projet-card { margin-bottom: 20px; }
 }
